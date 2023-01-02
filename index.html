@@ -2,26 +2,38 @@
 layout: base
 ---
 <div class="wrapper">
-    <header>
-        {% if site.compass.logo %}
-        <div class="logo-container">
-          <a class="logo" href="{{ page.baseurl }}" style="background-image: url('{{ site.baseurl }}{{ site.compass.logo }}')"></a>
-        </div>
-        {% endif %}
-
-        {% if site.compass.author %}
-        <div class="author-container"><h1>{{ site.compass.author }}</h1></div>
-        {% endif %}
-
-        {% if site.compass.tagline %}
-        <div class="tagline-container"><p>{{ site.compass.tagline }}</p></div>
-        {% endif %}
-    </header>
-    <main>
-      {% if site.compass.include_content %}
-      <div class="content">
-        {% include content.html %}
+  <header>
+    {% if site.logo %}
+      <div class="logo-container">
+        <a class="logo" href="{{ "/" | relative_url }}" style="background-image: url('{{ site.logo | relative_url }}')"></a>
       </div>
-      {% endif %}
-    </main>
+    {% endif %}
+
+    <div class="author-container">
+      <h1><span>Muntashir</span> <span>Al-Islam</span></h1>
+    </div>
+
+    <hr />
+
+    <ul class="main-list">
+      <li><a href="/blog" title="blog" class="blog">{% include icons/blog.svg %}</a></li>
+      <li><a href="https://github.com/MuntashirAkon" title="GitHub">{% include icons/github.svg %}</a></li>
+      <li><a href="https://twitter.com/Muntashir" title="Twitter">{% include icons/twitter.svg %}</a></li>
+      <li><a href="https://stackoverflow.com/users/4147849" title="Stack Overflow">{% include icons/stack-overflow.svg %}</a></li>
+      <li><a href="mailto://muntashirakon@riseup.net" title="E-Mail">{% include icons/mail.svg %}</a></li>
+    </ul>
+
+  </header>
+  <main>
+    <div class="content">
+      <h2>About Me</h2>
+      <p>My name is Muntashir Al-Islam (also known as Muntashir Akon). I have a B.S
+        in Computer Science &amp; Engineering. I am an open source contributor and
+        activist. My activism particularly focuses on <a href="https://reproducible-builds.org/" target="_blank" rel="noreferrer">reproducible builds</a>
+        and privacy. My current job is really a side-job where I work remotely from
+        home. I am available for hiring until I manage a better job. [Unlike some
+        people, I shall not disclose my hobbies because you’ll think I’m joking.]
+      </p>
+    </div>
+  </main>
 </div>

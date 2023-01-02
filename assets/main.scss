@@ -1,12 +1,12 @@
 ---
 ---
 
-$text-color: #46433A;
-$anchor-text-color: #CE534D;
-$background-color: #F1EED9;
+$text-color: #111;
+$anchor-text-color: rgb(220, 40, 40);
+$background-color: #fffff8;
 
 body {
-	font-family: 'Vollkorn', serif;
+	font-family: "et-book", Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 	color: $text-color;
 	background-color: $background-color;
 }
@@ -36,46 +36,78 @@ a:hover {
 
 
 /*** main content list ***/
-.main-list-item {
-	font-weight: bold;
-	font-size: 1.2em;
-	margin: 0.8em 0;
-}
-
-/* override the left margin added by font awesome for the main content list,
-since it must be aligned with the content */
-.fa-ul.main-list {
+ul.main-list {
+  /* override the left margin added by font awesome for the main content list,
+  since it must be aligned with the content */
 	margin-left: 0;
-}
-
-/* list icons */
-.main-list-item-icon {
-	width: 36px;
-	color: $text-color;
+  
+  li {
+    display: inline-block;
+  	margin: 0.8em 0;
+    
+    a {
+      display: inline-block;
+    	width: 3rem;
+      height: 2rem;
+    	color: $text-color;
+      text-align: center;
+      vertical-align: middle;
+      
+      svg {
+        width: 2rem;
+        height: 2rem;
+        fill: $text-color;
+      }
+      
+      &:hover {
+        color: #33332c;
+        
+        svg {
+          fill: #33332c;
+        }
+      }
+    }
+    
+    .blog {
+      svg {
+        width: 1.6rem;
+        height: 2rem;
+        fill: $text-color;
+      }      
+    }
+  }
 }
 
 /*** logo ***/
 .logo-container {
 	text-align: center;
-}
-
-.logo {
-	width: 96px;
-	height: 96px;
-	display: inline-block;
-	background-size: cover;
-	border-radius: 50%;
-	-moz-border-radius: 50%;
-	border: 2px solid $background-color;
-	box-shadow: 0 0 0 3px $text-color;
+  
+  .logo {
+  	width: 96px;
+  	height: 96px;
+  	display: inline-block;
+  	background-size: cover;
+  	border-radius: 50%;
+  	-moz-border-radius: 50%;
+  	border: 2px solid $background-color;
+  	box-shadow: 0 0 0 3px $text-color;
+  }
 }
 
 /*** author ***/
-.author-container h1 {
-	font-size: 2.8em;
-	margin-top: 0;
-	margin-bottom: 0;
-	text-align: center;
+.author-container {
+  margin-top: 3em;
+  
+  h1 {
+    font-size: 2.8em;
+    margin-top: 0;
+    margin-bottom: 0;
+	  text-align: center;
+  }
+  
+  span {
+    display: inline-block;
+  }
 }
 
 /*** tagline ***/
@@ -88,11 +120,12 @@ since it must be aligned with the content */
 /******/
 hr {
 	border: 0;
-	height: 1px;
-	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
-	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, rgba(0,0,0,0));
+	height: 0.1rem;
+  background-image: linear-gradient(-45deg, $text-color, transparent);
+	background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), $text-color, $text-color);
+	background-image: -moz-linear-gradient(left, rgba(0,0,0,0), $text-color, $text-color);
+	background-image: -ms-linear-gradient(left, rgba(0,0,0,0), $text-color, $text-color);
+	background-image: -o-linear-gradient(left, rgba(0,0,0,0), $text-color, $text-color);
 }
 
 /*** footer ***/
@@ -101,13 +134,6 @@ footer {
 	bottom: 0;
 	right: 0;
 	height: 20px;
-}
-
-.poweredby {
-	font-family: "Arial Narrow", Arial;
-	font-size: 0.6em;
-	line-height: 0.6em;
-	padding: 0 5px;
 }
 
 /*** media queries ***/
