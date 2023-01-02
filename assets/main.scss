@@ -174,3 +174,20 @@ footer {
 		padding: 0;
 	}
 }
+
+@media (prefers-color-scheme: dark) {
+    body{
+      background: #090906;
+      filter: invert(1);
+    }
+    
+    img,iframe,a,a:hover,a:focus{
+      filter: invert(1);
+    }
+    
+    ul.main-list li {
+      a, a:hover {
+        filter: invert(0);
+      }
+    }
+}
