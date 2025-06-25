@@ -3,6 +3,7 @@ layout: base
 title: About
 ---
 
+<!-- BEGIN Header -->
 <header>
   {% if site.avatar %}
   <div class="logo-container">
@@ -31,13 +32,18 @@ Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email
 </header>
 
 ---
+<!-- END Header -->
 
-{% if site.conf.homepage.news %}
+
+<!-- BEGIN Recent News -->
+{% if site.conf.homepage.news and site.data.news.size > 0 %}
+{% assign show_more_as_page = site.conf.pages.news %}
 ## Recent News
 <ul>
 {% for item in site.data.news %}
-<li markdown="span"><b>[{{ item.year }}]</b> {{ item.news }}</li>
-  {% if forloop.index0 == 2 %}
+  {% if forloop.index0 == 3 %}
+  {% assign has_details = true %}
+  {% if show_more_as_page != true %}
 </ul>
 
 <details markdown="block">
@@ -45,20 +51,39 @@ Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email
 
 <ul>
   {% endif %}
+  {% endif %}
+  {% if has_details != true or show_more_as_page != true %}
+  <li markdown="span"><b>[{{ item.year }}]</b> {{ item.news }}</li>
+  {% endif %}
 {% endfor %}
 </ul>
 
+{% if has_details %}
+{% if show_more_as_page %}
+<div><a href="{{ "/news" | relative_url }}">More…</a></div>
+{% else %}
 </details>
+{% endif %}
+{% endif %}
 ---
 {% endif %}
+<!-- END Recent News -->
 
+
+<!-- BEGIN Intro -->
 {% if site.conf.homepage.intro %}{% include intro.md %}{% endif %}
+<!-- END Intro -->
 
+
+<!-- BEGIN Publications -->
 {% if site.conf.homepage.publications %}
 ## Publications
 {% include publications.html subheading="h3" %}
 {% endif %}
+<!-- END Publications -->
 
+
+<!-- BEGIN Projects -->
 {% if site.conf.homepage.projects %}
 ## Selected Projects
 {% assign sorted_projects = site.projects | sort: 'priority' %}
@@ -70,7 +95,10 @@ Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email
 {% endfor %}
 </ul>
 {% endif %}
+<!-- END Projects -->
 
+
+<!-- BEGIN Teaching -->
 {% if site.conf.homepage.teaching %}
 ## Teaching
 {% assign sorted_teaching = site.teaching | sort: 'date' | reverse %}
@@ -85,7 +113,10 @@ Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email
 {{ teaching.content }}
 {% endfor %}
 {% endif %}
+<!-- END Teaching -->
 
+
+<!-- BEGIN Honors and Awards -->
 {% if site.conf.homepage.awards %}
 ## Honors and Awards
 {% assign awards = site.data.awards %}
@@ -95,3 +126,4 @@ Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email
 {% endfor %}
 </ul>
 {% endif %}
+<!-- END Honors and Awards -->
