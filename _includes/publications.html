@@ -18,7 +18,7 @@ Params:
       {%- assign citation = citation | replace: old_text, new_text -%}
     {%- endfor -%}
     {{ citation | raw }}
-    {% if pub.raw.note %}[<a href="{{ pub.raw.note }}" target="_blank">PDF</a>]{%- endif -%}
+    {% if pub.raw.note %}[<a href="{{ pub.raw.note | relative_url }}" target="_blank">PDF</a>]{%- endif -%}
     {%- if pub.raw.annote -%}<span style="color: purple;">★ {{ pub.raw.annote }}</span>{%- endif -%}
   </li>
 {%- endfor -%}
@@ -38,7 +38,7 @@ Params:
       {%- assign citation = citation | replace: old_text, new_text -%}
     {%- endfor -%}
     {{ citation | raw }}
-    {% if pub.raw.note %}[<a href="{{ pub.raw.note }}" target="_blank">PDF</a>]{% endif %}
+    {% if pub.raw.note %}[<a href="{{ pub.raw.note | relative_url }}" target="_blank">PDF</a>]{% endif %}
     {% if pub.raw.annote %}<span style="color: purple;">★ {{ pub.raw.annote }}</span>{%- endif -%}
   </li>
 {%- endfor -%}

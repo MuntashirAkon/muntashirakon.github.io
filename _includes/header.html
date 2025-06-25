@@ -1,6 +1,6 @@
 <nav>
   <div id="heading">
-    <img class="logo title" src="{{ 'images/UCR_Icon_WhtBG.png' | absolute_url }}" />
+    <img class="logo title" src="{{ site.logo | absolute_url }}" />
     <h2 class="title">{{ site.title }}</h2>
   </div>
   <label class="menu-icon" for="menu-btn">{% include icons/hamburger_button.svg %}</label>
@@ -14,7 +14,7 @@
     {% if site.conf.pages.teaching %}<li><a href="{{ "/teaching" | relative_url }}">Teaching</a></li>{% endif %}
     {% if site.conf.pages.employment %}<li><a href="{{ "/employment" | relative_url }}">Employment</a></li>{% endif %}
     {% if site.conf.pages.education %}<li><a href="{{ "/education" | relative_url }}">Education</a></li>{% endif %}
-    {% if site.blog %}<li><a href="{{ site.blog | absolute_url }}">Blog</a></li>{% endif %}
+    {% if site.blog %}<li><a href="{{ site.blog | relative_url }}">Blog</a></li>{% endif %}
     {% if site.conf.pages.gallery %}<li><a href="{{ "/gallery" | relative_url }}">Gallery</a></li>{% endif %}
   </ul>
 </nav>

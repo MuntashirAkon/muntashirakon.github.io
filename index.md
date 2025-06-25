@@ -24,9 +24,9 @@ Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email
       {% if site.linkedin_username %}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn" target="_blank" rel="noreferrer">{% include icons/linkedin.svg %}</a></li>{% endif %}
       {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}" title="GitHub" target="_blank" rel="noreferrer">{% include icons/github.svg %}</a></li>{% endif %}
       {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter" target="_blank" rel="noreferrer">{% include icons/twitter.svg %}</a></li>{% endif %}
-      {% if site.mastodon_url %}<li><a href="{{ site.mastodon_url }}" title="Mastodon" target="_blank" rel="noreferrer">{% include icons/mastodon.svg %}</a></li>{% endif %}
+      {% if site.mastodon_url %}<li><a href="{{ site.mastodon_url | relative_url }}" title="Mastodon" target="_blank" rel="noreferrer">{% include icons/mastodon.svg %}</a></li>{% endif %}
       {% if site.stackoverflow_id %}<li><a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" title="Stack Overflow" target="_blank" rel="noreferrer">{% include icons/stack-overflow.svg %}</a></li>{% endif %}
-      {% if site.cv %}<li><a href="{{ site.cv }}" title="CV" target="_blank" rel="noreferrer">{% include icons/cv.svg %}</a></li>{% endif %}
+      {% if site.cv %}<li><a href="{{ site.cv | relative_url }}" title="CV" target="_blank" rel="noreferrer">{% include icons/cv.svg %}</a></li>{% endif %}
     </ul>
   </div>
 </header>
@@ -60,7 +60,7 @@ Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email
 
 {% if has_details %}
 {% if show_more_as_page %}
-<div><a href="{{ "/news" | relative_url }}">More…</a></div>
+<div class="right" ><a href="{{ "/news" | relative_url }}">More…</a></div>
 {% else %}
 </details>
 {% endif %}
