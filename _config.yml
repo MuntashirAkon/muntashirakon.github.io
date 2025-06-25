@@ -11,10 +11,14 @@ address: "465 Winston Chung Hall, Riverside, CA 92521"
 work_email: "malis002@ucr.edu"
 email: "muntashirakon@riseup.net"
 # Social
+google_scholar_user_id: "VSiB-S8AAAAJ" # XXXX-XXXXXXX
+orcid_id: # xxxx-xxxx-xxxx-xxxx
+research_gate_profile_id:
 github_username: "MuntashirAkon"
 twitter_username: "Muntashir"
 linkedin_username: "muntashir-al-islam"
 mastodon_url: "https://infosec.exchange/@muntashir"
+facebook_username:
 stackoverflow_id: 4147849
 blog: https://muntashirakon.github.io/blog
 cv: https://drive.google.com/file/d/104SHOVeQA--x15izlkU3LCOiUSoc9VQc/preview
@@ -24,19 +28,19 @@ conf:
   title: true
   pages:
     cv: true
-    news: true
-    publications: true
+    news: false
+    publications: false
     projects: true
     teaching: true
-    employment: true
-    education: true
+    employment: false
+    education: false
     gallery: true
   homepage:
     news: true
     intro: true
     publications: true
     projects: true
-    teaching: true
+    teaching: false
     awards: true
 
 rss: rss

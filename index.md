@@ -21,11 +21,15 @@ title: About
 Email: {% if site.work_email %}[{{ site.work_email }}](mailto:{{ site.work_email }}){% if site.work_email != site.email %}, {% endif %}{% endif %}[{{ site.email }}](mailto:{{ site.email }})
   </p>
     <ul class="icon-list no-margin-top">
+      {% if site.google_scholar_user_id %}<li><a href="https://scholar.google.com/citations?user={{ site.google_scholar_user_id }}" title="Google Scholar" target="_blank" rel="noreferrer">{% include icons/scholar.svg %}</a></li>{% endif %}
+      {% if site.orcid_id %}<li><a href="https://orcid.org/{{ site.orcid_id }}" title="ORCiD" target="_blank" rel="noreferrer">{% include icons/orcid.svg %}</a></li>{% endif %}
+      {% if site.research_gate_profile_id %}<li><a href="https://www.researchgate.net/profile/{{ site.research_gate_profile_id }}" title="Research Gate" target="_blank" rel="noreferrer">{% include icons/rg.svg %}</a></li>{% endif %}
       {% if site.linkedin_username %}<li><a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn" target="_blank" rel="noreferrer">{% include icons/linkedin.svg %}</a></li>{% endif %}
       {% if site.github_username %}<li><a href="https://github.com/{{ site.github_username }}" title="GitHub" target="_blank" rel="noreferrer">{% include icons/github.svg %}</a></li>{% endif %}
-      {% if site.twitter_username %}<li><a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter" target="_blank" rel="noreferrer">{% include icons/twitter.svg %}</a></li>{% endif %}
+      {% if site.twitter_username %}<li><a href="https://x.com/{{ site.twitter_username }}" title="X (Twitter)" target="_blank" rel="noreferrer">{% include icons/x.svg %}</a></li>{% endif %}
       {% if site.mastodon_url %}<li><a href="{{ site.mastodon_url | relative_url }}" title="Mastodon" target="_blank" rel="noreferrer">{% include icons/mastodon.svg %}</a></li>{% endif %}
       {% if site.stackoverflow_id %}<li><a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" title="Stack Overflow" target="_blank" rel="noreferrer">{% include icons/stack-overflow.svg %}</a></li>{% endif %}
+      {% if site.facebook_username %}<li><a href="https://fb.com/{{ site.facebook_username }}" title="Facebook" target="_blank" rel="noreferrer">{% include icons/facebook.svg %}</a></li>{% endif %}
       {% if site.cv %}<li><a href="{{ site.cv | relative_url }}" title="CV" target="_blank" rel="noreferrer">{% include icons/cv.svg %}</a></li>{% endif %}
     </ul>
   </div>
