@@ -1,8 +1,3 @@
----
-layout: base
-title: Staticademia
----
-
 # Staticademia
 
 A template for static website built using Jekyll.
@@ -72,6 +67,7 @@ In general, you only need to edit the contents of the following folders dependin
 - `images`
 - `js`
 - `pdfs`
+- `_includes/intro.md`: The introduction in the homepage should go here (instead of adding them directly to the `index.md` file).
 
 Also, if you're not familiar with Markdown format, not that anything between `---` at the top of a file represents the frontmatter of the file, and they are written in YAML format.
 
@@ -88,7 +84,6 @@ Some other information can be updated using the files in the `_data` folder. Her
 - `awards.csv`: It should contain the awards and honors you have received over the years in descending order. The first entry is year and the second is the description. It supports both Markdown and HTML syntax, but make sure to use double quotation if you use any commas since entries in each line are separated by comma.
 - `conferences.bib`: The conference papers that you have published in Bibtex format.
 - `conferences.json`: This is a generated file (see below), please DO NOT EDIT.
-- `intro.md`: The introduction in the homepage should go here (instead of adding them directly to the `index.md` file).
 - `journals.bib`: The journal papers that you have published in Bibtex format.
 - `journals.json`: This is a generated file (see below), please DO NOT EDIT.
 - `names.yml`: The names you have used over the years with your publications. They will be automatically highlighted during the site generation. Each line contains a single entry followed by a `- ` (YAML format).
