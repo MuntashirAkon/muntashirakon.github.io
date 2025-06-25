@@ -1,0 +1,155 @@
+/**************************************
+    $NAVIGATION
+/**************************************/
+nav {
+  position: relative;
+
+  #heading {
+    margin: 0 auto;
+    display: inline-block;
+
+    .title:nth-child(2) {
+      padding-left: 0;
+    }
+
+    .logo {
+      width: 4.2rem;
+    }
+
+    .title {
+      display: inline-block;
+      vertical-align: middle;
+      padding: 1rem;
+      margin: 0;
+    }
+  }
+  
+  .menu-icon {
+    cursor: pointer;
+    display: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    padding: 0.35rem;
+    border: $dimen-border solid $color-popup-light-border;
+    border-radius: $dimen-border-radius-small;
+    background-color: $color-background-light;
+    position: absolute;
+    top: -0.1rem;
+    right: 0;
+    
+    svg {
+      fill: $color-icon-light;
+    }
+  
+    &:hover {
+      background-color: $color-button-light-background;
+      
+      svg {
+        fill: $color-icon-light-hover;
+      }
+    }
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .menu-btn:checked ~ .site-nav {
+    display: inline-block;
+  }
+
+  ul.site-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      margin: 0 0.25rem;
+      text-align: center;
+    
+      a {
+        display: inline-block;
+        padding: 0.25rem 0.5rem;    
+      }
+
+      a,a:visited {
+        text-decoration: none;    
+      }
+    }
+  }  
+}
+
+/**************************************
+    $MEDIA QUERIES - TABLET
+/**************************************/
+@media(max-width: 850px) {
+  nav {
+    #heading {
+      text-align: center;
+      display: block;
+
+      .title { margin-top: -1rem; }
+    }
+  
+    #subheading {
+      display: none;
+    }
+
+    .menu-icon {
+      display: inline-block;
+    }
+
+    ul.site-nav {
+      display: none;
+      float: right;
+      position: absolute;
+      right: 0;
+      z-index: 3;
+      background-color: $color-popup-light-background;
+      border: 0.1rem solid $color-popup-light-border;
+      border-radius: $dimen-border-radius-small;
+      margin: 0;
+      padding: 0.3rem 0;
+
+      li {
+        display: block;
+        margin: 0;
+        text-align: start;
+
+        a, a:visited {
+          display: block;
+          padding: 0 1rem;
+        }
+      }
+    }    
+  }
+}
+
+/**************************************
+    $MEDIA QUERIES - PRINT
+/**************************************/
+@media print {
+  nav {  
+    .menu-icon, .site-nav {
+      display: none !important;
+    }    
+  }
+}
+
+/**************************************
+    $MEDIA QUERIES - DARK
+/**************************************/
+@media (prefers-color-scheme: dark) {
+  nav {
+    .menu-icon {
+      background-color: $color-background-dark-alt;
+      filter: invert(0);
+      
+      &:hover {
+        background-color: $color-button-dark-background;
+        filter: invert(0);
+      }
+    }
+  }
+}

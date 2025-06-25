@@ -1,0 +1,26 @@
+ol.custom-counter {
+    counter-reset: item;
+    margin-left: 0;
+    padding-left: 0;
+
+    li.conference, li.journal {
+        display: block;
+        margin-left: 3.5rem;
+    }
+
+    li.conference::before {
+        display: inline-block;
+        content: "[C" counter(item) "] ";
+        counter-increment: item;
+        width: 3.5rem;
+        margin-left: -3.5rem;
+    }
+
+    li.journal::before {
+        display: inline-block;
+        content: "[J" counter(item) "] ";
+        counter-increment: item;
+        width: 3.5rem;
+        margin-left: -3.5rem;
+    }
+}

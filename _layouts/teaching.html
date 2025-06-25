@@ -1,0 +1,25 @@
+---
+layout: compress
+---
+
+{% include head.html %}
+
+{% include header.html %}
+<main>
+
+<h3 class="center-tablet normal-font underline"></h3>
+<h1 class="no-margin-top center-tablet"><strong>{{ page.institute }}</strong>, {{ page.country }}</h1>
+{{ page.position }} ({{ page.duration }})
+<ul>
+{% for course in page.courses %}
+  <li>{{ course.code }}: {{ course.title }} ({{ course.sessions }})</li>
+{% endfor %}
+</ul>
+{{ content }}
+
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>

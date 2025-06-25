@@ -1,0 +1,94 @@
+title: "<b>Muntashir</b> Al-Islam"
+logo: images/UCR_Icon_WhtBG.png
+author: "Muntashir Al-Islam"
+description: "Muntashir's academic profile"
+# Info
+avatar: images/IMG_0927_2x2.jpg
+alt_names: "Muntashir Akon"
+headline: "Ph.D Student, University of California, Riverside"
+department: "Department of Computer Science and Engineering"
+address: "465 Winston Chung Hall, Riverside, CA 92521"
+work_email: "malis002@ucr.edu"
+email: "muntashirakon@riseup.net"
+# Social
+github_username: "MuntashirAkon"
+twitter_username: "Muntashir"
+linkedin_username: "muntashir-al-islam"
+mastodon_url: "https://infosec.exchange/@muntashir"
+stackoverflow_id: 4147849
+blog: https://muntashirakon.github.io/blog
+cv: https://drive.google.com/file/d/104SHOVeQA--x15izlkU3LCOiUSoc9VQc/preview
+
+# Configuration
+conf:
+  title: true
+  pages:
+    cv: true
+    news: true
+    publications: true
+    projects: true
+    teaching: true
+    employment: true
+    education: true
+    gallery: true
+  homepage:
+    news: true
+    intro: true
+    publications: true
+    projects: true
+    teaching: true
+    awards: true
+
+rss: rss
+
+markdown: kramdown
+highlighter: rouge
+
+compress_html:
+  clippings: all
+  comments: [""]
+  endings: [html, head, body, li, dt, dd, rt, rp, optgroup, option, colgroup, caption, thead, tbody, tfoot, tr, td, th]
+  profile: false
+  blanklines: false
+  ignore:
+    envs: []
+    
+sass:
+  sass_dir: css
+  style: compressed
+    
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  
+permalink: pretty
+timezone: UTC
+future: false
+
+titles_from_headings:
+  strip_title: true
+  collections: true
+
+collections:
+  teaching:
+    output: true
+    permalink: /:collection/:name
+  projects:
+    output: true
+    permalink: /:collection/:name
+  employment:
+    output: true
+    permalink: /:collection/:name
+  education:
+    output: true
+    permalink: /:collection/:name
+  gallery:
+    output: true
+    permalink: /:collection/:name
+
+defaults:
+  - scope:
+      path: "*.webmanifest"
+    values:
+      sitemap: false

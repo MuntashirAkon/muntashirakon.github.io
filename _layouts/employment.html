@@ -1,0 +1,20 @@
+---
+layout: compress
+---
+
+{% include head.html %}
+
+{% include header.html %}
+<main>
+
+<h3 class="center-tablet normal-font underline"></h3>
+<h1 class="no-margin-top center-tablet"><strong>{{ page.company }}</strong>, {{ page.country }}</h1>
+{{ page.position }} ({% if page.type %}{{ page.type }}, {% endif %}{{ page.duration }})
+{{ content }}
+
+</main>
+
+{% include footer.html %}
+
+</body>
+</html>

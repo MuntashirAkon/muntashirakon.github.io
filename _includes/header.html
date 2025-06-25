@@ -1,0 +1,20 @@
+<nav>
+  <div id="heading">
+    <img class="logo title" src="{{ 'images/UCR_Icon_WhtBG.png' | absolute_url }}" />
+    <h2 class="title">{{ site.title }}</h2>
+  </div>
+  <label class="menu-icon" for="menu-btn">{% include icons/hamburger_button.svg %}</label>
+  <input class="menu-btn" type="checkbox" id="menu-btn" />
+  <ul class="site-nav sans">
+    <li><a href="{{ "/" | relative_url }}">Home</a></li>
+    {% if site.conf.pages.news %}<li><a href="{{ "/news" | relative_url }}">News</a></li>{% endif %}
+    {% if site.conf.pages.cv %}<li><a href="{{ "/cv" | relative_url }}">CV</a></li>{% endif %}
+    {% if site.conf.pages.publications %}<li><a href="{{ "/publications" | relative_url }}">Publications</a></li>{% endif %}
+    {% if site.conf.pages.projects %}<li><a href="{{ "/projects" | relative_url }}">Projects</a></li>{% endif %}
+    {% if site.conf.pages.teaching %}<li><a href="{{ "/teaching" | relative_url }}">Teaching</a></li>{% endif %}
+    {% if site.conf.pages.employment %}<li><a href="{{ "/employment" | relative_url }}">Employment</a></li>{% endif %}
+    {% if site.conf.pages.education %}<li><a href="{{ "/education" | relative_url }}">Education</a></li>{% endif %}
+    {% if site.blog %}<li><a href="{{ site.blog | absolute_url }}">Blog</a></li>{% endif %}
+    {% if site.conf.pages.gallery %}<li><a href="{{ "/gallery" | relative_url }}">Gallery</a></li>{% endif %}
+  </ul>
+</nav>

@@ -1,0 +1,46 @@
+{%- comment -%}
+Params:
+  - subheading (default: h2)
+{%- endcomment -%}
+
+{% assign subheading = include.subheading | default: "h2" %}
+
+{%- if site.data.conferences.size > 0 -%}
+<{{ subheading }}>Peer-Reviewed Conferences</{{ subheading }}>
+<ol class="custom-counter">
+{%- for pub in site.data.conferences -%}
+  {%- assign citation = pub.html -%}
+  <li class="conference">
+    {%- if pub.raw.version -%}<strong>[{{ pub.raw.version }}]</strong>&nbsp;{%- endif -%}
+    {%- for name in site.data.names -%}
+      {%- capture old_text -%}{{ name }}{%- endcapture -%}
+      {%- capture new_text -%}<strong>{{ old_text }}</strong>{%- endcapture -%}
+      {%- assign citation = citation | replace: old_text, new_text -%}
+    {%- endfor -%}
+    {{ citation | raw }}
+    {% if pub.raw.note %}[<a href="{{ pub.raw.note }}" target="_blank">PDF</a>]{%- endif -%}
+    {%- if pub.raw.annote -%}<span style="color: purple;">★ {{ pub.raw.annote }}</span>{%- endif -%}
+  </li>
+{%- endfor -%}
+</ol>
+{%- endif -%}
+
+{%- if site.data.journals.size > 0 -%}
+<{{ subheading }}>Peer-Reviewed Journals</{{ subheading }}>
+<ol class="custom-counter">
+{%- for pub in site.data.journals -%}
+  {%- assign citation = pub.html -%}
+  <li class="journal">
+    {%- if pub.raw.version -%}<strong>[{{ pub.raw.version }}]</strong>&nbsp;{%- endif -%}
+    {%- for name in site.data.names -%}
+      {%- capture old_text -%}{{ name }}{%- endcapture -%}
+      {%- capture new_text -%}<strong>{{ old_text }}</strong>{%- endcapture -%}
+      {%- assign citation = citation | replace: old_text, new_text -%}
+    {%- endfor -%}
+    {{ citation | raw }}
+    {% if pub.raw.note %}[<a href="{{ pub.raw.note }}" target="_blank">PDF</a>]{% endif %}
+    {% if pub.raw.annote %}<span style="color: purple;">★ {{ pub.raw.annote }}</span>{%- endif -%}
+  </li>
+{%- endfor -%}
+</ol>
+{%- endif -%}

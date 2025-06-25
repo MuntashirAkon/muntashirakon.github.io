@@ -1,0 +1,54 @@
+div.flex {
+  display: flex;
+
+  .layout-2-3 {
+    flex: 2;
+  }
+  .layout-1-3 {
+    flex: 1;
+  }
+
+  .layout-1-2 {
+    flex: 1;
+  }
+}
+
+.padding-1rem {
+  padding: 1rem;
+}
+
+.middle {
+  align-items: center;
+  vertical-align: middle;
+}
+
+.center {
+  text-align: center;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+.normal-font {
+  font-style: normal;
+}
+
+.no-margin-top {
+  margin-top: 0;
+}
+
+.no-margin-bottom {
+  margin-bottom: 0;
+}
+
+
+@media(max-width: 850px) {
+  div.flex {
+    display: block;
+  }
+
+  .center-tablet {
+    text-align: center;
+  }
+}

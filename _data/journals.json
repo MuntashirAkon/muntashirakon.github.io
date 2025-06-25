@@ -1,0 +1,48 @@
+[
+  {
+    "id": "akon2021adact",
+    "html": "Mujtahid Akon, Muntashir Akon, Mohimenul Kabir,\nM Saifur Rahman, and M Sohel Rahman. ADACT: A tool for analysing (dis)\nsimilarity among nucleotide and protein sequences using minimal and\nrelative absent words. <em>Bioinformatics</em> 37, 10 (2021), 1468\u20131470.\n<a\nhref=\"https://doi.org/10.1093/bioinformatics/btaa853\">10.1093/bioinformatics/btaa853</a>",
+    "raw": {
+      "DOI": "10.1093/bioinformatics/btaa853",
+      "author": [
+        {
+          "family": "Akon",
+          "given": "Mujtahid"
+        },
+        {
+          "family": "Akon",
+          "given": "Muntashir"
+        },
+        {
+          "family": "Kabir",
+          "given": "Mohimenul"
+        },
+        {
+          "family": "Rahman",
+          "given": "M Saifur"
+        },
+        {
+          "family": "Rahman",
+          "given": "M Sohel"
+        }
+      ],
+      "container-title": "Bioinformatics",
+      "id": "akon2021adact",
+      "issue": "10",
+      "issued": {
+        "date-parts": [
+          [
+            2021
+          ]
+        ]
+      },
+      "note": "pdfs/btaa853.pdf",
+      "page": "1468-1470",
+      "publisher": "Oxford University Press",
+      "title": "ADACT: A tool for analysing (dis) similarity among nucleotide and protein sequences using minimal and relative absent words",
+      "title-short": "ADACT",
+      "type": "article-journal",
+      "volume": "37"
+    }
+  }
+]
