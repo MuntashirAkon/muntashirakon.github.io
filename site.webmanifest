@@ -1,8 +1,8 @@
 ---
 ---
 {
-    "name": "{{ site.title }}",
-    "short_name": "{{ site.title }}",
+    "name": "{{ site.title | strip_html }}",
+    "short_name": "{{ site.title | strip_html }}",
     "icons": [
         {
             "src": "/images/android-chrome-192x192.png",
