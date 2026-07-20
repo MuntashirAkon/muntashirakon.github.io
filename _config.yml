@@ -33,7 +33,7 @@ conf:
     projects: true
     teaching: true
     employment: false
-    education: false
+    education: true
     gallery: true
     books: true
   homepage:
